@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">
+	<title>FEC Demo</title>
+</head>
+
+<body>
+	<div className="wrapper">
+		<div id="Carousel"></div>
+		<div id="ratingsAndReviews"></div>
+		<div id="RVDeals"></div>
+		<br><br>
+		<div id="SideBar"></div>
+	</div>
+	<!-- <script src="/lib/react.development.js"></script> -->
+	<!-- <script src="/lib/react-dom.development.js"></script> -->
+
+	<!-- [Todo] Serve all your JS bundles (and CSS files) from S3/cloudfront -->
+	<!-- <script src="http://localhost:3001/app.js"></script> -->
+	<script src="./js_bundles/3001-bundle.js"></script>
+	<script src="./js_bundles/3002-bundle.js"></script>
+	<script src="./js_bundles/3003-bundle.js"></script>
+	<script src="./js_bundles/3004-bundle.js"></script>
+
+	<!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+	<!-- Note: don't need ReactDOM.render() from below, because bundle.js is from local directory (not remote one) -->
+	<script>
+		// ReactDOM.render(
+		// 	React.createElement(Carousel),
+		// 	document.getElementById('Carousel')
+		// );
+	</script>
+</body>
+
+</html>
