@@ -7,17 +7,17 @@ body {
   display: grid;
   grid-template-columns: 60% 40%;
 }
+
 .rowDivider {
   border-bottom: 1px solid;
 }
 .columnDivider {
   border-right: 1px solid;
 }
-
-button {
+/* button {
   background-color: #4caf50;
   color: white;
-}
+} */
 
 /* Tom's CSS file */
 
