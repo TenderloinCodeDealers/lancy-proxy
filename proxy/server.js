@@ -7,10 +7,15 @@ app.use("/:id", express.static(path.join(__dirname + "/public")));
 // console.log("Joined path: " + path.join(__dirname + "/public"));
 
 // Note: use Express, to re-direct relative paths
-const carouselServer = "http://localhost:3001";
-const sideBarServer = "http://localhost:3004";
-const ratingsAndReviewsServer = "http://localhost:3002";
-const rvDealsServer = "http://localhost:3003";
+// Note: use Amazon EC2, for team members to host their micro services
+const carouselServer = "http://54.183.146.159";
+const sideBarServer = "http://18.191.153.175:3004";
+const ratingsAndReviewsServer = "http://13.57.214.131:30";
+const rvDealsServer = "http://54.193.11.2:3000";
+// const carouselServer = "http://localhost:3001";
+// const sideBarServer = "http://localhost:3004";
+// const ratingsAndReviewsServer = "http://localhost:3002";
+// const rvDealsServer = "http://localhost:3003";
 
 app.get("/:id/api/images", function(req, res) {
   const id = req.params.id;
@@ -56,7 +61,9 @@ app.get(`/:id/api/recently-viewed-service-data`, function(req, res) {
   res.redirect(`${rvDealsServer}/${id}/api/recently-viewed-service-data`);
 });
 
-const port = process.env.PORT || 3000;
+// Note: moved port number from here to Dockerfile
+const port = process.env.PORT || 3000; // For testing
+// const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
 });

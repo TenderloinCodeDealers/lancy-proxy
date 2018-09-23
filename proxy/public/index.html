@@ -4,32 +4,36 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="./style.css">
-	<title>FEC Demo</title>
+	<title>Vourcher Demo (FEC)</title>
 </head>
 
 <body>
 	<div class="wrapper">
 		<div>
-			<h3>Product Name</h3>
+			<p id="firstLine">Product Name</p>
 		</div>
 		<div></div>
 		<div id="Carousel"></div>
-		<div id="SideBar"></div>
+		<!-- <div id="SideBar"></div> -->
+		<div></div>
 		<div id="ratingsAndReviews"></div>
 		<div></div>
-		<div id="RVDeals"></div>
 	</div>
+	<div id="RVDeals"></div>
+	<div id="SideBar"></div>
 
 	<!-- Note: don't need ReactDOM.render() from below, because bundle.js is from local directory (not remote one) -->
 	<!-- <script src="/lib/react.development.js"></script> -->
 	<!-- <script src="/lib/react-dom.development.js"></script> -->
 
-	<!-- [Todo] Serve all your JS bundles (and CSS files) from S3/cloudfront -->
-	<!-- <script src="http://localhost:3001/app.js"></script> -->
-	<script src="./js_bundles/3001-bundle.js"></script>
-	<script src="./js_bundles/3002-bundle.js"></script>
-	<script src="./js_bundles/3003-bundle.js"></script>
-	<script src="./js_bundles/3004-bundle.js"></script>
+	<!-- Note: use Amazon S3, for team members to store their JS bundle files -->
+	<!-- <script src="https://s3-us-west-1.amazonaws.com/vourcher-lancy/3001-bundle.js"></script> -->
+	<script src="https://s3-us-west-1.amazonaws.com/vourcher/ProxyBundles/Carousel/bundle.js"></script>
+	<!-- <script src="https://s3-us-west-1.amazonaws.com/vourcher-lancy/3002-bundle.js"></script> -->
+	<script src="https://s3-us-west-1.amazonaws.com/vourcher-proxy/bundle.js"></script>
+	<!-- <script src="https://s3-us-west-1.amazonaws.com/vourcher-lancy/3003-bundle.js"></script> -->
+	<script src="https://s3-us-west-1.amazonaws.com/vourcher-tom-proxy/Recently-Viewed-Deals/bundle.js"></script>
+	<script src="https://s3-us-west-1.amazonaws.com/vourcher-lancy/3004-bundle.js"></script>
 
 	<!-- Note: don't need ReactDOM.render() from below -->
 	<!-- see: https://reactjs.org/docs/react-without-jsx.html -->

@@ -2,6 +2,10 @@
 
 body {
   font-family: arial;
+  /* font-family: OpenSansRegular; */
+}
+#firstLine {
+  font-size: 20px;
 }
 .wrapper {
   display: grid;
@@ -14,6 +18,14 @@ body {
 .columnDivider {
   border-right: 1px solid;
 }
+
+#SideBar {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+
+/* Moved button to my styled component, to avoid conflict with others' button(s) */
 /* button {
   background-color: #4caf50;
   color: white;
